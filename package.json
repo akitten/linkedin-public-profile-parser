@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nelsonic/linkedin-profile-api.git"
+    "url": "git+https://github.com/nelsonic/linkedin-profile.git"
   },
   "keywords": [
     "linkedin",
@@ -23,9 +23,9 @@
   "author": "John Smith",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/nelsonic/linkedin-profile-api/issues"
+    "url": "https://github.com/nelsonic/linkedin-profile/issues"
   },
-  "homepage": "https://github.com/nelsonic/linkedin-profile-api#readme",
+  "homepage": "https://github.com/nelsonic/linkedin-profile#readme",
   "engines": {
     "node": ">= 0.12"
   },
