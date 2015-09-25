@@ -1,4 +1,4 @@
-# LinkedIn Public Profile Parser
+# LinkedIn *Public* Profile Parser
 
 *Parse* data from ***Public*** LinkedIn Profile Page (***for educational purposes*** - *never to store it*!)
 
@@ -16,4 +16,13 @@ we're in, so this is what we *have* to do.
 
 ## What?
 
-As the
+As the name suggests this node.js module lets you
+parse the *public* profile page for any LinkedIn profile
+by supplying a valid LinkedIn URL.
+
+
+## How?
+
+```sh
+curl -A "Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2.3) Gecko/20100401 Firefox/3.6.3" https://uk.linkedin.com/in/simonlab -o test/linkedin/simon-labondance-founders.html
+```
