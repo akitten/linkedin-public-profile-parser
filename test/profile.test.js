@@ -14,6 +14,7 @@ test('Parse Simon\'s Public Profile Page', function(t) {
       t.ok(data.connections > 68, 'Simon has: '+data.connections + ' connections');
       t.ok(data.fullname === 'Simon Labondance', 'Fullname: '+data.fullname);
       t.ok(data.location === 'London, Greater London, United Kingdom', 'Location: '+data.location)
+      t.ok(data.current === 'Founders & Coders C.I.C', 'Current Work: '+data.current);
       console.log(data);
       t.end();
     })
