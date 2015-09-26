@@ -1,6 +1,8 @@
 # LinkedIn *Public* Profile Parser
 
-*Parse* data from ***Public*** LinkedIn Profile Page (***for educational purposes*** - *never to store it*!)
+*Parse* data from ***Public*** LinkedIn Profile Page ***for educational purposes***.   
+
+[![Build Status](https://travis-ci.org/nelsonic/linkedin-public-profile-parser.svg)](https://travis-ci.org/nelsonic/linkedin-public-profile-parser)
 
 ## Why?
 

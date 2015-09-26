@@ -46,6 +46,6 @@
   },
   "pre-commit": [
     "jshint",
-    "coverage",
+    "coverage"
   ]
 }
