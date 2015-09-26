@@ -28,3 +28,7 @@ by supplying a valid LinkedIn URL.
 ```sh
 curl -A "Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2.3) Gecko/20100401 Firefox/3.6.3" https://uk.linkedin.com/in/simonlab -o test/linkedin/simon-labondance-founders.html
 ```
+
+
+
+curl -A "Mozilla/5.0 (Windows NT 5.1; rv:19.0) Gecko/20100101 Firefox/19.0" https://uk.linkedin.com/in/simonlab -o test/simon-labondance-founders.html
