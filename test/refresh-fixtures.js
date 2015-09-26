@@ -29,8 +29,6 @@ function req (index) {
       console.log('- - - - - - - - - - - - - - - - - - - - - - - - - - - - \n')
       console.log(response.headers)
       console.log('- - - - - - - - - - - - - - - - - - - - - - - - - - - - \n')
-
-      callback(404);
     }
     else {
       console.log(chalk.bgGreen.black(" - - - Linkedin Public Profile Parser >> "+url +"  - - - "));
