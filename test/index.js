@@ -20,7 +20,7 @@ test('Force 404 error by supplying a mal-formed url', function(t){
 test('Successfully Parse Elon\'s Public LinkedIn Profile Page ', function(t){
 	var url = 'https://www.linkedin.com/in/emusk';
 	lp(url, function(err, data){
-    t.ok(err === null, 'Instant 404 Error when url not set');
+    t.ok(err === null, 'No error when viewing Elon\'s Profile');
 		t.end();
 	})
 })
