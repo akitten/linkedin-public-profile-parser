@@ -60,3 +60,23 @@ test('Parse Elon\'s Public Profile Page', function(t) {
     })
   })
 })
+
+test('Parse Nelson\'s Public Profile Page', function(t) {
+  var file = __dirname + '/fixtures/nelsonic.html'
+  fs.readFile(file, function(err, html){
+    // console.log(err, html);
+    var $ = cheerio.load(html);
+    var url = 'https://www.linkedin.com/in/nelsonic';
+    profile($,url, function(err, data){
+      t.ok(data.connections === 500, 'Nelson has: '+data.connections + ' connections');
+      // t.ok(data.summary.indexOf('teacher') > -1, 'Summary contains "teacher"');
+      // t.ok(data.fullname === 'Simon Labondance', 'Fullname: '+data.fullname);
+      // t.ok(data.location === 'London, Greater London, United Kingdom', 'Location: '+data.location)
+      // t.ok(data.current === 'Founders & Coders C.I.C', 'Current Work: '+data.current);
+      t.ok(data.skills.length > 42, 'Skills: '+data.skills.length);
+      t.ok(data.skills.indexOf('Node.js') > -1, 'Nelson knows Node');
+      // console.log(data);
+      t.end();
+    })
+  })
+})

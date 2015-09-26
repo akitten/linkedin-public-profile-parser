@@ -1,6 +1,6 @@
 {
   "name": "linkedin-public-profile-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parse any Public LinkedinIn Profile Page",
   "main": "index.js",
   "scripts": {
