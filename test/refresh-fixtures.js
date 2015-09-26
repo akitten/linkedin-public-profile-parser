@@ -10,12 +10,14 @@ var urls    = [
   'https://www.linkedin.com/pub/abdi-ahmed/100/384/6b0', // Abdi
   'https://www.linkedin.com/in/emusk',                   // Elon
   'https://uk.linkedin.com/in/simonlab',                 // Simon
+  'https://uk.linkedin.com/in/iteles',                   // Inês
   'https://www.linkedin.com/in/nelsonic'                 // This Guy
 ];
 var files   = [
   'abdi-ahmed.html',
   'emusk.html',
   'simonlab.html',
+  'iteles.html',
   'nelsonic.html'
 ];
 

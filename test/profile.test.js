@@ -25,11 +25,9 @@ test('Parse Simon\'s Public Profile Page', function(t) {
 test('Parse Abdi\'s Public Profile Page', function(t) {
   var file = __dirname + '/fixtures/abdi-ahmed.html'
   fs.readFile(file, function(err, html){
-    // console.log(err, html);
     var $ = cheerio.load(html);
     var url = 'https://www.linkedin.com/pub/abdi-ahmed/100/384/6b0';
     profile($,url, function(err, data){
-      // t.ok(err === null, 'No Errors when parsing Simon\'s public profile page.');
       t.ok(data.connections > 36, 'Abdi has: '+data.connections + ' connections');
       t.ok(data.summary.indexOf('teacher') > -1, 'Summary contains "teacher"');
       // t.ok(data.fullname === 'Simon Labondance', 'Fullname: '+data.fullname);
@@ -51,7 +49,7 @@ test('Parse Elon\'s Public Profile Page', function(t) {
     profile($,url, function(err, data){
       t.ok(data.connections === 500, 'Elon has: '+data.connections + ' connections');
       // t.ok(data.summary.indexOf('teacher') > -1, 'Summary contains "teacher"');
-      // t.ok(data.fullname === 'Simon Labondance', 'Fullname: '+data.fullname);
+      t.ok(data.fullname === 'Elon Musk', 'Fullname: '+data.fullname);
       // t.ok(data.location === 'London, Greater London, United Kingdom', 'Location: '+data.location)
       // t.ok(data.current === 'Founders & Coders C.I.C', 'Current Work: '+data.current);
       // t.ok(data.picture.indexOf('.jpg') > -1, 'Profile Picture: '+data.picture);
@@ -61,7 +59,7 @@ test('Parse Elon\'s Public Profile Page', function(t) {
   })
 })
 
-test('Parse Nelson\'s Public Profile Page', function(t) {
+test.only('Parse Nelson\'s Public Profile Page', function(t) {
   var file = __dirname + '/fixtures/nelsonic.html'
   fs.readFile(file, function(err, html){
     // console.log(err, html);
@@ -75,7 +73,9 @@ test('Parse Nelson\'s Public Profile Page', function(t) {
       // t.ok(data.current === 'Founders & Coders C.I.C', 'Current Work: '+data.current);
       t.ok(data.skills.length > 42, 'Skills: '+data.skills.length);
       t.ok(data.skills.indexOf('Node.js') > -1, 'Nelson knows Node');
-      // console.log(data);
+      t.ok(data.languages.length > 5, 'Nelson knows '+ data.languages[5]);
+      t.ok(data.languages[4].indexOf('Afrikaans') > -1, 'Nelson knows '+ data.languages[4]);
+      // console.log(data.languages);
       t.end();
     })
   })
