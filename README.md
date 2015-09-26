@@ -1,4 +1,4 @@
-# LinkedIn *Public* Profile Parser
+# LinkedIn *Public* Profile Page Parser
 
 *Parse* data from ***Public*** LinkedIn Profile Page ***for educational purposes***.   
 
@@ -32,3 +32,15 @@ curl -A "Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2.3) Gecko/20100401
 
 
 curl -A "Mozilla/5.0 (Windows NT 5.1; rv:19.0) Gecko/20100101 Firefox/19.0" https://uk.linkedin.com/in/simonlab -o test/simon-labondance-founders.html
+
+
+## tl;dr
+
+Because LinkedinIn has blocked the IP address of any server
+running on the Amazon or DigitalOcean cloud
+see: http://stackoverflow.com/a/32615188/1148249
+we are unable to run a full end-to-end test on Travis-CI.
+
+Our work-around for this is that Travis-CI tests our *parser*
+but not our "*requester*". To run the *full* (*end-to-end*) test suite
+use `npm run full`
