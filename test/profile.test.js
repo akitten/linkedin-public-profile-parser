@@ -12,7 +12,8 @@ test('Parse Simon\'s Public Profile Page', function(t) {
     profile($,url, function(err, data){
       t.ok(err === null, 'No Errors when parsing Simon\'s public profile page.');
       t.ok(data.connections > 68, 'Simon has: '+data.connections + ' connections');
-      t.ok(data.fullname === 'Simon Labondance', 'data.fullname: '+data.fullname);
+      t.ok(data.fullname === 'Simon Labondance', 'Fullname: '+data.fullname);
+      t.ok(data.location === 'London, Greater London, United Kingdom', 'Location: '+data.location)
       console.log(data);
       t.end();
     })
