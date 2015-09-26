@@ -15,6 +15,7 @@ test('Parse Simon\'s Public Profile Page', function(t) {
       t.ok(data.fullname === 'Simon Labondance', 'Fullname: '+data.fullname);
       t.ok(data.location === 'London, Greater London, United Kingdom', 'Location: '+data.location)
       t.ok(data.current === 'Founders & Coders C.I.C', 'Current Work: '+data.current);
+      t.ok(data.picture.indexOf('.jpg') > -1, 'Profile Picture: '+data.picture);
       console.log(data);
       t.end();
     })
