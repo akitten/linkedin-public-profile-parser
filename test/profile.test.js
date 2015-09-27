@@ -3,6 +3,22 @@ var fs      = require('fs');
 var cheerio = require('cheerio');
 var profile = require('../lib/profile');
 
+test('Zumra\'s Public Profile Page is EMPTY!', function(t) {
+  var file = __dirname + '/fixtures/zumra.html'
+  fs.readFile(file, function(err, html){
+    var $ = cheerio.load(html);
+    var url = 'https://uk.linkedin.com/pub/z%C3%BCmra-kinali/2b/731/b5b';
+    profile($,url, function(err, data){
+      // console.log(data);
+      t.ok(data.fullname === 'zümra kinali', 'Name: '+data.fullname);
+      t.ok(data.connections === 0, 'ZERO Connections: '+ data.connections);
+      t.ok(data.skills.length === 0, 'ZERO Skills '+data.skills);
+      t.ok(data.current.length === 0, 'No current employment/expierience '+data.current)
+      t.end();
+    })
+  })
+})
+
 test('Parse Simon\'s Public Profile Page', function(t) {
   var file = __dirname + '/fixtures/simonlab.html'
   fs.readFile(file, function(err, html){
@@ -65,7 +81,7 @@ test('Parse Nelson\'s Public Profile Page', function(t) {
   })
 })
 
-test('Parse Ines\' Public Profile Page', function(t) {
+test.only('Parse Ines\' Public Profile Page', function(t) {
   var file = __dirname + '/fixtures/iteles.html'
   fs.readFile(file, function(err, html){
     var $ = cheerio.load(html);
@@ -75,22 +91,6 @@ test('Parse Ines\' Public Profile Page', function(t) {
       t.ok(data.skills.length > 10, 'Skills: '+data.skills.length);
       t.ok(data.skills.indexOf('Node.js') > -1, 'Ines knows Node');
       console.log(data.experience.current);
-      t.end();
-    })
-  })
-})
-
-test('Zumra\'s Public Profile Page is EMPTY!', function(t) {
-  var file = __dirname + '/fixtures/zumra.html'
-  fs.readFile(file, function(err, html){
-    var $ = cheerio.load(html);
-    var url = 'https://uk.linkedin.com/pub/z%C3%BCmra-kinali/2b/731/b5b';
-    profile($,url, function(err, data){
-      // t.ok(data.languages[2].indexOf('Espagnol') > -1, 'Simon knows '+ data.languages[2]);
-      console.log(data);
-      t.ok(data.fullname === 'zümra kinali', 'Name: '+data.fullname);
-      t.ok(data.connections === 0, 'ZERO Connections: '+ data.connections);
-      t.ok(data.skills.length === 0, 'ZERO Skils '+data.skills)
       t.end();
     })
   })
