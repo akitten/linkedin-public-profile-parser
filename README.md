@@ -3,6 +3,10 @@
 *Parse* data from ***Public*** LinkedIn Profile Page ***for educational purposes***.   
 
 [![Build Status](https://travis-ci.org/nelsonic/linkedin-public-profile-parser.svg)](https://travis-ci.org/nelsonic/linkedin-public-profile-parser)
+[![codecov.io](http://codecov.io/github/nelsonic/linkedin-public-profile-parser/coverage.svg?branch=master)](http://codecov.io/github/nelsonic/linkedin-public-profile-parser?branch=master)
+[![bitHound Score](https://www.bithound.io/github/nelsonic/linkedin-public-profile-parser/badges/score.svg)](https://www.bithound.io/github/nelsonic/linkedin-public-profile-parser)
+[![Dependency Status](https://david-dm.org/nelsonic/linkedin-public-profile-parser.svg)](https://david-dm.org/nelsonic/linkedin-public-profile-parser)
+[![devDependency Status](https://david-dm.org/nelsonic/linkedin-public-profile-parser/dev-status.svg)](https://david-dm.org/nelsonic/linkedin-public-profile-parser#info=devDependencies)
 
 ## Why?
 
