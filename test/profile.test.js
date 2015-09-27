@@ -64,3 +64,18 @@ test('Parse Nelson\'s Public Profile Page', function(t) {
     })
   })
 })
+
+test.only('Parse Ines\' Public Profile Page', function(t) {
+  var file = __dirname + '/fixtures/iteles.html'
+  fs.readFile(file, function(err, html){
+    var $ = cheerio.load(html);
+    var url = 'https://www.linkedin.com/in/iteles';
+    profile($,url, function(err, data){
+      t.ok(data.connections === 500, 'Ines has: '+data.connections + ' connections');
+      t.ok(data.skills.length > 10, 'Skills: '+data.skills.length);
+      t.ok(data.skills.indexOf('Node.js') > -1, 'Ines knows Node');
+      // console.log(data);
+      t.end();
+    })
+  })
+})
