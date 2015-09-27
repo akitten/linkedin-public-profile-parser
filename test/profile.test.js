@@ -90,7 +90,12 @@ test.only('Parse Ines\' Public Profile Page', function(t) {
       t.ok(data.connections === 500, 'Ines has: '+data.connections + ' connections');
       t.ok(data.skills.length > 10, 'Skills: '+data.skills.length);
       t.ok(data.skills.indexOf('Node.js') > -1, 'Ines knows Node');
-      console.log(data.experience.current);
+      t.ok(count > 3, 'Ines is currently doing '+count + ' things ...')
+      var kiva = data.experience.current[3];
+      t.ok(kiva.org === 'Kiva.org', 'Ines volunteers for '+kiva.org)
+      t.ok(kiva.date.indexOf('June 2007') > -1, 'Ines has been with Kiva '+ kiva.date);
+      t.ok(kiva.desc.indexOf('coordinating') > -1, 'Kiva Description: '+kiva.desc)
+      var count = data.experience.current.length      // console.log(data.experience.current);
       t.end();
     })
   })
