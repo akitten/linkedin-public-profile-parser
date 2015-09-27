@@ -45,7 +45,7 @@ test('Parse Abdi\'s Public Profile Page', function(t) {
     profile($,url, function(err, data){
       t.ok(data.connections > 36, 'Abdi has: '+data.connections + ' connections');
       t.ok(data.summary.indexOf('teacher') > -1, 'Summary contains "teacher"');
-      console.log(data);
+      // console.log(data);
       t.end();
     })
   })
@@ -81,7 +81,7 @@ test('Parse Nelson\'s Public Profile Page', function(t) {
   })
 })
 
-test.only('Parse Ines\' Public Profile Page', function(t) {
+test('Parse Ines\' Public Profile Page', function(t) {
   var file = __dirname + '/fixtures/iteles.html'
   fs.readFile(file, function(err, html){
     var $ = cheerio.load(html);
@@ -93,10 +93,16 @@ test.only('Parse Ines\' Public Profile Page', function(t) {
       var count = data.experience.current.length;
       t.ok(count > 3, 'Ines is currently doing '+count + ' things ...')
       var kiva = data.experience.current[3];
+      // console.log(kiva);
       t.ok(kiva.org === 'Kiva.org', 'Ines volunteers for '+kiva.org)
       t.ok(kiva.date.indexOf('June 2007') > -1, 'Ines has been with Kiva '+ kiva.date);
       t.ok(kiva.desc.indexOf('coordinating') > -1, 'Kiva Description: '+kiva.desc)
-      //  console.log(data.experience.past);
+      count = data.experience.past.length;
+      t.ok(count > 12, 'Ines has done '+count + ' things in the past!')
+      var first = data.experience.past[count-1];
+      t.ok(first.org === 'Agua Montanha Lazer', 'Ines\'s First Job was at: '+first.org)
+      t.ok(first.date.indexOf('June 2000') > -1, 'First Job Date: '+first.date);
+      //  console.log(data.experience.past[count-1]);
       t.end();
     })
   })
