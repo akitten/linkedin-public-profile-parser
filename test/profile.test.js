@@ -80,7 +80,7 @@ test('Parse Ines\' Public Profile Page', function(t) {
   })
 })
 
-test.only('Zumra\'s Public Profile Page is EMPTY!', function(t) {
+test('Zumra\'s Public Profile Page is EMPTY!', function(t) {
   var file = __dirname + '/fixtures/zumra.html'
   fs.readFile(file, function(err, html){
     var $ = cheerio.load(html);
