@@ -79,3 +79,19 @@ test('Parse Ines\' Public Profile Page', function(t) {
     })
   })
 })
+
+test.only('Zumra\'s Public Profile Page is EMPTY!', function(t) {
+  var file = __dirname + '/fixtures/zumra.html'
+  fs.readFile(file, function(err, html){
+    var $ = cheerio.load(html);
+    var url = 'https://uk.linkedin.com/pub/z%C3%BCmra-kinali/2b/731/b5b';
+    profile($,url, function(err, data){
+      // t.ok(data.languages[2].indexOf('Espagnol') > -1, 'Simon knows '+ data.languages[2]);
+      console.log(data);
+      t.ok(data.fullname === 'zümra kinali', 'Name: '+data.fullname);
+      t.ok(data.connections === 0, 'ZERO Connections: '+ data.connections);
+      t.ok(data.skills.length === 0, 'ZERO Skils '+data.skills)
+      t.end();
+    })
+  })
+})

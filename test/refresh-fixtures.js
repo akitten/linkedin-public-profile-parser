@@ -11,14 +11,16 @@ var urls    = [
   'https://www.linkedin.com/in/emusk',                   // Elon
   'https://uk.linkedin.com/in/simonlab',                 // Simon
   'https://uk.linkedin.com/in/iteles',                   // Inês
-  'https://www.linkedin.com/in/nelsonic'                 // This Guy
+  'https://www.linkedin.com/in/nelsonic',                // This Guy
+  'https://uk.linkedin.com/pub/z%C3%BCmra-kinali/2b/731/b5b' // empty profile
 ];
 var files   = [
   'abdi-ahmed.html',
   'emusk.html',
   'simonlab.html',
   'iteles.html',
-  'nelsonic.html'
+  'nelsonic.html',
+  'zumra.html' // random person with empty profile. test failure.
 ];
 
 function req (index) {
