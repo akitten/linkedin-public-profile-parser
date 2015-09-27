@@ -7,6 +7,7 @@
 [![bitHound Score](https://www.bithound.io/github/nelsonic/linkedin-public-profile-parser/badges/score.svg)](https://www.bithound.io/github/nelsonic/linkedin-public-profile-parser)
 [![Dependency Status](https://david-dm.org/nelsonic/linkedin-public-profile-parser.svg)](https://david-dm.org/nelsonic/linkedin-public-profile-parser)
 [![devDependency Status](https://david-dm.org/nelsonic/linkedin-public-profile-parser/dev-status.svg)](https://david-dm.org/nelsonic/linkedin-public-profile-parser#info=devDependencies)
+[![HitCount](https://hitt.herokuapp.com/nelsonic/inkedin-public-profile-parser.svg)](https://github.com/nelsonic/inkedin-public-profile-parser)
 
 ## Why?
 
