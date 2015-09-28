@@ -83,7 +83,7 @@ test('Parse Nelson\'s Public Profile Page', function(t) {
 
 test('Parse Ines\' Public Profile Page', function(t) {
   var file = __dirname + '/fixtures/iteles.html'
-  fs.readFile(file, function(err, html){
+  fs.readFile(file, function(err, html) {
     var $ = cheerio.load(html);
     var url = 'https://www.linkedin.com/in/iteles';
     profile($,url, function(err, data){
@@ -103,6 +103,7 @@ test('Parse Ines\' Public Profile Page', function(t) {
       t.ok(first.org === 'Agua Montanha Lazer', 'Ines\'s First Job was at: '+first.org)
       t.ok(first.date.indexOf('June 2000') > -1, 'First Job Date: '+first.date);
       //  console.log(data.experience.past[count-1]);
+      console.log(JSON.stringify(data, null, 2));
       t.end();
     })
   })
