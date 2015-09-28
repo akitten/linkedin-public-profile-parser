@@ -23,27 +23,16 @@ var files   = [
   'zumra.html' // random person with empty profile. test failure.
 ];
 
+var fetcher = require('../lib/fetcher');
+
 function req (index) {
   var url = urls[index];
   var file = __dirname + '/fixtures/' + files[index];
-  wreck.get(url, function (error, response, html) {
-    if (error || !response || response.statusCode !== 200) {
-      console.log(chalk.bgRed.black(" - - - URL FAIL >> " + url + "  - - - "));
-      // console.log(error, response.headers);
-      // console.log(' - - - - - - - - - - - - - - - - - - - - - - - - - - -')
-      console.log(error)
-      console.log('- - - - - - - - - - - - - - - - - - - - - - - - - - - - \n')
-      console.log(response.headers)
-      console.log('- - - - - - - - - - - - - - - - - - - - - - - - - - - - \n')
-    }
-    else {
-      console.log(chalk.bgGreen.black(" - - - Linkedin Public Profile Parser >> "+url +"  - - - "));
-      // console.log(html.toString());
-      fs.writeFile(file, html.toString(), function(err, data){
-        console.log('done');
-      })
-    }
-  });
+  fetcher(url, function(err, url, html){
+    fs.writeFile(file, html.toString(), function(err, data){
+      console.log('done');
+    })
+  })
 }
 
 for(var i = 0; i < urls.length; i++) {
