@@ -60,14 +60,12 @@ Then parse the html you just downloaded:
 
 ```js
 var fs      = require('fs');
-var cheerio = require('cheerio');
 var profile = require('../lib/profile');
 var file = __dirname + '/fixtures/iteles.html'
-var $ = cheerio.load(html);
 var url = 'https://www.linkedin.com/in/iteles';
 
 fs.readFile(file, function(err, html) {
-  profile($, url, function(err, data){
+  profile(url, html, function(err, data){
     console.log(JSON.stringify(data, null, 2));
   })
 })
