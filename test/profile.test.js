@@ -1,6 +1,5 @@
 var test    = require('tape');
 var fs      = require('fs');
-var cheerio = require('cheerio');
 var profile = require('../lib/profile');
 
 test('Zumra\'s Public Profile Page is EMPTY!', function(t) {
@@ -8,7 +7,7 @@ test('Zumra\'s Public Profile Page is EMPTY!', function(t) {
   fs.readFile(file, function(err, html){
     var $ = cheerio.load(html);
     var url = 'https://uk.linkedin.com/pub/z%C3%BCmra-kinali/2b/731/b5b';
-    profile($,url, function(err, data){
+    profile($, url, function(err, data){
       // console.log(data);
       t.ok(data.fullname === 'zümra kinali', 'Name: '+data.fullname);
       t.ok(data.connections === 0, 'ZERO Connections: '+ data.connections);
