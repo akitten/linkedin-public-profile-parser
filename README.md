@@ -30,6 +30,28 @@ by supplying a valid LinkedIn URL.
 
 ## How?
 
+### Basic usage
+
+Install the `linkedin-public-profile-parser` package from NPM:
+
+```sh
+npm install linkedin-public-profile-parser --save
+```
+
+Then in your code:
+
+```js
+var LP = require('linkedin-public-profile-parser');
+var url = 'https://uk.linkedin.com/in/simonlab';
+LP(url, function(err, data){
+  console.log(JSON.stringify(data, null, 2)); // see below for sample output JSON
+})
+```
+
+### Want More?
+
+if you want ***more control*** over the process try this:
+
 ```sh
 curl -A "Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2.3) Gecko/20100401 Firefox/3.6.3" https://uk.linkedin.com/in/iteles -o test/fixtures/iteles.html
 ```
