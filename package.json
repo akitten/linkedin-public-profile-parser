@@ -1,8 +1,8 @@
 {
   "name": "linkedin-public-profile-parser",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Parse any *Public* LinkedinIn Profile Page",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "dev": "nodemon test/followers.js",
     "fast": "./node_modules/tape/bin/tape ./test/*test.js",
