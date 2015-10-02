@@ -2,6 +2,18 @@ var test    = require('tape');
 var fs      = require('fs');
 var profile = require('../lib/profile');
 
+test('Parse Benji\'s Public Profile Page', function(t) {
+  var file = __dirname + '/fixtures/benji.html'
+  fs.readFile(file, function(err, html){
+    var url = 'https://uk.linkedin.com/pub/benjamin-lees/58/75/162';
+    profile(url, html, function(err, data){
+      t.ok(data.connections > 160, 'Benji has: '+data.connections + ' connections');
+      t.ok(data.languages[0].indexOf('English') > -1, 'Benji knows '+ data.languages[0]);
+      t.end();
+    })
+  })
+})
+
 test('Zumra\'s Public Profile Page is EMPTY!', function(t) {
   var file = __dirname + '/fixtures/zumra.html'
   fs.readFile(file, function(err, html){

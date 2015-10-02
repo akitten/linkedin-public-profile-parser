@@ -12,7 +12,8 @@ var urls    = [
   'https://uk.linkedin.com/in/simonlab',                 // Simon
   'https://uk.linkedin.com/in/iteles',                   // Inês
   'https://www.linkedin.com/in/nelsonic',                // This Guy
-  'https://uk.linkedin.com/pub/z%C3%BCmra-kinali/2b/731/b5b' // empty profile
+  'https://uk.linkedin.com/pub/z%C3%BCmra-kinali/2b/731/b5b', // empty profile
+  'https://uk.linkedin.com/pub/benjamin-lees/58/75/162'  //benji
 ];
 var files   = [
   'abdi-ahmed.html',
@@ -20,7 +21,8 @@ var files   = [
   'simonlab.html',
   'iteles.html',
   'nelsonic.html',
-  'zumra.html' // random person with empty profile. test failure.
+  'zumra.html', // random person with empty profile. test failure.
+  'benji.html'
 ];
 
 var fetcher = require('../lib/fetcher');
