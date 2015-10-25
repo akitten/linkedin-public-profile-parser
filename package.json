@@ -34,6 +34,7 @@
     "wreck": "^6.3.0"
   },
   "devDependencies": {
+    "chalk": "^1.1.1",
     "istanbul": "^0.3.21",
     "jshint": "^2.8.0",
     "pre-commit": "1.1.1",

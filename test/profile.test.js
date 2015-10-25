@@ -9,6 +9,7 @@ test('Parse Benji\'s Public Profile Page', function(t) {
     profile(url, html, function(err, data){
       t.ok(data.connections > 160, 'Benji has: '+data.connections + ' connections');
       t.ok(data.languages[0].indexOf('English') > -1, 'Benji knows '+ data.languages[0]);
+      t.ok(data.current === 'Founders & Coders C.I.C.', 'Benji works at Founders & Coders C.I.C.');
       t.end();
     })
   })
@@ -38,7 +39,7 @@ test('Parse Simon\'s Public Profile Page', function(t) {
       t.ok(data.connections > 68, 'Simon has: '+data.connections + ' connections');
       t.ok(data.fullname === 'Simon Labondance', 'Fullname: '+data.fullname);
       t.ok(data.location === 'London, Greater London, United Kingdom', 'Location: '+data.location)
-      t.ok(data.current === 'Founders & Coders C.I.C', 'Current Work: '+data.current);
+      t.ok(data.current === 'Founders & Coders C.I.C.', 'Current Work: '+data.current);
       t.ok(data.picture.indexOf('.jpg') > -1, 'Profile Picture: '+data.picture);
       t.ok(data.languages[2].indexOf('Espagnol') > -1, 'Simon knows '+ data.languages[2]);
       t.end();
@@ -66,6 +67,7 @@ test('Parse Elon\'s Public Profile Page', function(t) {
     profile(url, html,  function(err, data){
       t.ok(data.connections === 500, 'Elon has: '+data.connections + ' connections');
       t.ok(data.fullname === 'Elon Musk', 'Fullname: '+data.fullname);
+      t.ok(data.current === 'Tesla Motors, SolarCity, SpaceX', 'Elon works at Tesla Motors, SolarCity, SpaceX');
       t.end();
     })
   })
@@ -81,6 +83,7 @@ test('Parse Nelson\'s Public Profile Page', function(t) {
       t.ok(data.skills.indexOf('Node.js') > -1, 'Nelson knows Node');
       t.ok(data.languages.length > 5, 'Nelson knows '+ data.languages[5]);
       t.ok(data.languages[4].indexOf('Afrikaans') > -1, 'Nelson knows '+ data.languages[4]);
+      t.ok(data.current === 'Founders & Coders, Q', 'Nelson works at Founders & Coders, Q');
       t.end();
     })
   })
@@ -106,8 +109,9 @@ test('Parse Ines\' Public Profile Page', function(t) {
       var first = data.experience.past[count-1];
       t.ok(first.org === 'Agua Montanha Lazer', 'Ines\'s First Job was at: '+first.org)
       t.ok(first.date.indexOf('June 2000') > -1, 'First Job Date: '+first.date);
+      t.ok(data.current === 'Founders & Coders, Ladies Who Code, Q', 'Ines works at Founders & Coders, Ladies Who Code, Q');
       //  console.log(data.experience.past[count-1]);
-      console.log(JSON.stringify(data, null, 2));
+    //   console.log(JSON.stringify(data, null, 2));
       t.end();
     })
   })

@@ -1,13 +1,13 @@
 # LinkedIn *Public* Profile Page Parser
 
-*Parse* data from ***Public*** LinkedIn Profile Page ***for educational purposes***.   
+*Parse* data from ***Public*** LinkedIn Profile Page ***for educational purposes***.
 
-[![Build Status](https://travis-ci.org/nelsonic/linkedin-public-profile-parser.svg)](https://travis-ci.org/nelsonic/linkedin-public-profile-parser)
-[![codecov.io](http://codecov.io/github/nelsonic/linkedin-public-profile-parser/coverage.svg?branch=master)](http://codecov.io/github/nelsonic/linkedin-public-profile-parser?branch=master)
-[![bitHound Score](https://www.bithound.io/github/nelsonic/linkedin-public-profile-parser/badges/score.svg)](https://www.bithound.io/github/nelsonic/linkedin-public-profile-parser)
-[![Dependency Status](https://david-dm.org/nelsonic/linkedin-public-profile-parser.svg)](https://david-dm.org/nelsonic/linkedin-public-profile-parser)
-[![devDependency Status](https://david-dm.org/nelsonic/linkedin-public-profile-parser/dev-status.svg)](https://david-dm.org/nelsonic/linkedin-public-profile-parser#info=devDependencies)
-[![HitCount](https://hitt.herokuapp.com/nelsonic/inkedin-public-profile-parser.svg)](https://github.com/nelsonic/inkedin-public-profile-parser)
+[![Build Status](https://travis-ci.org/akitten/linkedin-public-profile-parser.svg)](https://travis-ci.org/akitten/linkedin-public-profile-parser)
+[![codecov.io](http://codecov.io/github/akitten/linkedin-public-profile-parser/coverage.svg?branch=master)](http://codecov.io/github/akitten/linkedin-public-profile-parser?branch=master)
+[![bitHound Score](https://www.bithound.io/github/akitten/linkedin-public-profile-parser/badges/score.svg)](https://www.bithound.io/github/akitten/linkedin-public-profile-parser)
+[![Dependency Status](https://david-dm.org/akitten/linkedin-public-profile-parser.svg)](https://david-dm.org/akitten/linkedin-public-profile-parser)
+[![devDependency Status](https://david-dm.org/akitten/linkedin-public-profile-parser/dev-status.svg)](https://david-dm.org/akitten/linkedin-public-profile-parser#info=devDependencies)
+[![HitCount](https://hitt.herokuapp.com/akitten/linkedin-public-profile-parser.svg)](https://github.com/akitten/linkedin-public-profile-parser)
 
 ## Why?
 
