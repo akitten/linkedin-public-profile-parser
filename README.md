@@ -7,7 +7,7 @@
 [![bitHound Score](https://www.bithound.io/github/akitten/linkedin-public-profile-parser/badges/score.svg)](https://www.bithound.io/github/akitten/linkedin-public-profile-parser)
 [![Dependency Status](https://david-dm.org/akitten/linkedin-public-profile-parser.svg)](https://david-dm.org/akitten/linkedin-public-profile-parser)
 [![devDependency Status](https://david-dm.org/akitten/linkedin-public-profile-parser/dev-status.svg)](https://david-dm.org/akitten/linkedin-public-profile-parser#info=devDependencies)
-[![HitCount](https://hitt.herokuapp.com/akitten/linkedin-public-profile-parser.svg)](https://github.com/akitten/linkedin-public-profile-parser)
+[![HitCount](https://hitt.herokuapp.com/nelsonic/linkedin-public-profile-parser.svg)](https://github.com/akitten/linkedin-public-profile-parser)
 
 ## Why?
 
