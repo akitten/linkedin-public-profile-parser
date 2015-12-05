@@ -251,11 +251,15 @@ Which will print out the following *parsed* result:
 
 ## tl;dr
 
-Because LinkedinIn has blocked the IP address of any server
-running on the Amazon or DigitalOcean cloud
+Because LinkedIn has *blocked* the IP address of *any* server
+running on the Amazon, Azure or DigitalOcean data center (*by IP range...*)
 see: http://stackoverflow.com/a/32615188/1148249
 we are unable to run a full end-to-end test on Travis-CI.
 
 Our work-around for this is that Travis-CI tests our *parser*
-but not our "*requester*". To run the *full* (*end-to-end*) test suite
-use `npm run full`
+but not our "*requester*". To run the *full* (*end-to-end*) test suite on
+your local machine use the following command:
+
+```sh
+npm run full
+```
