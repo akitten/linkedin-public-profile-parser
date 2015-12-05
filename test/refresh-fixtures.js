@@ -1,11 +1,11 @@
 var fs      = require('fs');
 var Wreck   = require('wreck');
+var transform_linkedin_url = require('linkedin-canonical-url');
 var agent   = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2.3) Gecko/20100401 Firefox/3.6.3';
 var wreck   = Wreck.defaults({
     headers: { 'User-Agent': agent }
 });
 var cheerio = require('cheerio');
-var chalk   = require('chalk');
 var urls    = [
   'https://www.linkedin.com/pub/abdi-ahmed/100/384/6b0', // Abdi
   'https://www.linkedin.com/in/emusk',                   // Elon
@@ -28,11 +28,12 @@ var files   = [
 var fetcher = require('../lib/fetcher');
 
 function req (index) {
-  var url = urls[index];
+  var url = transform_linkedin_url(urls[index]); // transform the url!
   var file = __dirname + '/fixtures/' + files[index];
   fetcher(url, function(err, url, html){
+    // console.log(err, url)
     fs.writeFile(file, html.toString(), function(err, data){
-      console.log('done');
+      console.log(url, ' ✓');
     })
   })
 }
