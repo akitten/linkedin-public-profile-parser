@@ -104,7 +104,7 @@ test('Parse Ines\' Public Profile Page', function(t) {
   fs.readFile(file, function(err, html) {
     var url = 'https://www.linkedin.com/in/iteles';
     profile(url, html, function(err, data){
-      console.log(data);
+      console.log(JSON.stringify(data, null, 2));
       t.ok(data.connections === 500, 'Ines has: '+data.connections + ' connections');
       t.ok(data.skills.length > 10, 'Skills: '+data.skills.length);
       t.ok(data.skills.indexOf('Node.js') > -1, 'Ines knows Node');
