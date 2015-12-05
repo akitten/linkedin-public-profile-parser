@@ -6,7 +6,6 @@ var wreck   = Wreck.defaults({
     headers: { 'User-Agent': agent }
 });
 var cheerio = require('cheerio');
-var chalk   = require('chalk');
 var urls    = [
   'https://www.linkedin.com/pub/abdi-ahmed/100/384/6b0', // Abdi
   'https://www.linkedin.com/in/emusk',                   // Elon
