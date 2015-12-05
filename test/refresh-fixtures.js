@@ -32,9 +32,9 @@ function req (index) {
   var url = transform_linkedin_url(urls[index]); // transform the url!
   var file = __dirname + '/fixtures/' + files[index];
   fetcher(url, function(err, url, html){
-    console.log(err, url)
+    // console.log(err, url)
     fs.writeFile(file, html.toString(), function(err, data){
-      console.log('done');
+      console.log(url, ' ✓');
     })
   })
 }
