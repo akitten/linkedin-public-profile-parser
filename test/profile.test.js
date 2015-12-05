@@ -108,15 +108,16 @@ test('Parse Ines\' Public Profile Page', function(t) {
       t.ok(data.connections === 500, 'Ines has: '+data.connections + ' connections');
       t.ok(data.skills.length > 10, 'Skills: '+data.skills.length);
       t.ok(data.skills.indexOf('Node.js') > -1, 'Ines knows Node');
-      var count = data.experience.length;
-      t.ok(count > 16, 'Ines is has done '+count + ' things!')
-      var kiva = data.experience[3];
+      var count = data.experience.current.length;
+      t.ok(count > 2, 'Ines is doing '+count + ' things!')
+      var kiva = data.experience.current[3];
       // console.log(kiva);
       t.ok(kiva.org === 'Kiva.org', 'Ines volunteers for '+kiva.org)
       t.ok(kiva.date.indexOf('June 2007') > -1, 'Ines has been with Kiva '+ kiva.date);
       t.ok(kiva.desc.indexOf('coordinating') > -1, 'Kiva Description: '+kiva.desc)
+      count = data.experience.past.length; // non-present activites
       t.ok(count > 12, 'Ines has done '+count + ' things in the past!')
-      var first = data.experience[count-1];
+      var first = data.experience.past[count-1];
       // console.log(first);
       t.ok(first.org === 'Agua Montanha Lazer', 'Ines\'s First Job was at: '+first.org)
       t.ok(first.date.indexOf('June 2000') > -1, 'First Job Date: '+first.date);
