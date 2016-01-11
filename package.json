@@ -1,6 +1,6 @@
 {
   "name": "linkedin-public-profile-parser",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Parse any *Public* LinkedinIn Profile Page",
   "main": "lib/index.js",
   "scripts": {
@@ -36,11 +36,11 @@
     "wreck": "^7.0.0"
   },
   "devDependencies": {
-    "istanbul": "^0.4.1",
+    "istanbul": "^0.4.2",
     "jshint": "^2.8.0",
-    "nock": "^3.3.2",
+    "nock": "^5.2.1",
     "pre-commit": "^1.1.2",
-    "tape": "^4.2.2"
+    "tape": "^4.4.0"
   },
   "pre-commit": [
     "jshint",
