@@ -30,7 +30,7 @@ by supplying a valid LinkedIn URL.
 
 ## How?
 
-### Basic usage
+### Basic usage > *Node.js SERVER ONLY* <small>(LinkedIn Blocks *ALL* Browser-Based *CORS* Requests)</small>
 
 Install the `linkedin-public-profile-parser` package from NPM:
 
