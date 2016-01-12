@@ -32,6 +32,9 @@ by supplying a valid LinkedIn URL.
 
 ### Basic usage
 
+> **Note**: This Node.js Module ***ONLY*** Works as a ***SERVER-Side Script***  
+(LinkedIn Blocks *ALL* Browser-Based *CORS* Requests)
+
 Install the `linkedin-public-profile-parser` package from NPM:
 
 ```sh
