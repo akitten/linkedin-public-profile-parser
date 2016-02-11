@@ -12,10 +12,11 @@ test('Force url error by not setting a url', function(t){
 })
 
 test('Force 404 error by supplying a mal-formed url', function(t){
-	var url = 'https://uk.linkedin.com/in/simonlabond';
+	var url = 'https://uk.linkedin.com/in/simonlabondwrong';
 	lp(url, function(err, data){
+		console.log('error 4040', err);
     t.ok(err === 404, 'Instant 404 Error when url not set');
-	  t.ok(data.url === 'https://uk.linkedin.com/in/simonlabond', 'Return the mal-formed url');
+	  t.ok(data.url === 'https://uk.linkedin.com/in/simonlabondwrong', 'Return the mal-formed url');
 		t.end();
 	})
 })
