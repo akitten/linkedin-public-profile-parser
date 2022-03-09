@@ -3,7 +3,7 @@
 *Parse* data from ***Public*** LinkedIn Profile Page ***for educational purposes***.
 
 [![Build Status](https://travis-ci.org/akitten/linkedin-public-profile-parser.svg)](https://travis-ci.org/akitten/linkedin-public-profile-parser)
-[![HitCount](https://hitt.herokuapp.com/nelsonic/linkedin-public-profile-parser.svg)](https://github.com/akitten/linkedin-public-profile-parser)
+[![HitCount](https://hits.dwyl.com/nelsonic/linkedin-public-profile-parser.svg)](https://github.com/akitten/linkedin-public-profile-parser)
 
 ## Why?
 
